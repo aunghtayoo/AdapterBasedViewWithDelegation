@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_activity_tool"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_small">
+
+            <ImageView
+                android:id="@+id/toolbar_img_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="DUBAI"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_regular_3x"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/toolbar_img_tune"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_turned_in_black_24dp" />
+
+            <TextView
+                android:id="@+id/txt_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="Apr 2, 12pm - Apr6, 12pm"
+                android:textSize="@dimen/text_smaller" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/layout_hr"
+        android:layout_below="@+id/main_activity_tool"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:orientation="horizontal"
+        android:background="@color/divider"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_hr"
+        android:id="@+id/layout_tab"
+        android:paddingTop="@dimen/margin_medium_2"
+        android:paddingLeft="@dimen/margin_medium_3"
+        android:paddingRight="@dimen/margin_medium_3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold"
+            android:textColor="@color/primary_text"
+            android:id="@+id/tab_low_price"
+            android:text="LOWEST PRICE"/>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_below="@+id/tab_low_price"
+            android:layout_marginTop="@dimen/margin_small"
+            android:src="@drawable/ic_fiber_manual_record_black_24dp"
+            android:layout_marginLeft="@dimen/margin_xxlarge"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_regular"
+            android:id="@+id/tab_low_distance"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:text="DISTANCE"/>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_below="@+id/tab_low_price"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:src="@drawable/ic_fiber_manual_record_black_24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_regular"
+            android:id="@+id/tab_low_rec"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:text="RECOMMENDED"/>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_below="@+id/tab_low_price"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/margin_xxlarge"
+            android:src="@drawable/ic_fiber_manual_record_black_24dp"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_tab"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:layout_marginLeft="@dimen/margin_medium_2"
+        android:layout_marginRight="@dimen/margin_medium_2"
+        android:layout_above="@+id/layout_footer"
+        android:id="@+id/rv_event"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_footer"
+        android:padding="@dimen/margin_medium_2"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbl_price"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/icons"
+                android:id="@+id/txt_price"
+                android:textStyle="bold"
+                android:text="C$31 - C$1,417"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/icons"
+                android:layout_toEndOf="@+id/txt_price"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:text="per day, incl. taxes &amp; fees"/>
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/icons"
+            app:cardCornerRadius="@dimen/margin_small"
+            android:layout_below="@+id/lbl_price"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_height="48dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_small"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_count"
+                    android:textSize="@dimen/text_regular"
+                    android:textColor="@color/primary"
+                    android:text="2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_toEndOf="@id/txt_count"
+                    android:textSize="@dimen/text_regular"
+                    android:textColor="@color/primary"
+                    android:text="Select Filter"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

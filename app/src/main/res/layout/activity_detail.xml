@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.DetailActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_activity_tool"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_small">
+
+            <ImageView
+                android:id="@+id/toolbar_img_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_close_black_24dp" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Audi A5"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_regular_3x"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar_title"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textColor="@color/divider"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="Apr 2, 12pm - Apr6, 12pm"
+                android:textSize="@dimen/text_smaller" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/layout_hr"
+        android:layout_below="@+id/main_activity_tool"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:orientation="horizontal"
+        android:background="@color/divider"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_car_info"
+        android:layout_below="@+id/layout_hr"
+        android:padding="@dimen/margin_medium_2">
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/detail_car"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/audi_a5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_car"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textStyle="bold"
+            android:id="@+id/txt_car_type"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/text_regular_2x"
+            android:text="Luxury Car"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_car_type"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textStyle="bold"
+            android:id="@+id/txt_car_desc"
+            android:textColor="@color/primary_text"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/text_regular"
+            android:text="Audi A5 Sportback or Similar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_car_desc"
+            android:id="@+id/txt_car_date_time"
+            android:textColor="@color/primary_text"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/text_small"
+            android:text="Apr 3, 12pm - Apr 6, 12pm"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_price"
+        android:layout_below="@+id/layout_car_info"
+        android:padding="@dimen/margin_medium_2">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/primary"
+            app:cardCornerRadius="@dimen/margin_small"
+            android:layout_below="@+id/lbl_price"
+            android:padding="@dimen/text_small"
+            android:layout_height="48dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/margin_medium">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_tot_price"
+                    android:text="$1,417"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:textSize='@dimen/text_regular_3x'
+                    android:textColor="@color/icons"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CAD per day,\nincl. taxes &amp; fees"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:textSize='@dimen/text_small'
+                    android:textColor="@color/icons"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_book"
+                    android:text="BOOK"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/text_small"
+                    android:padding="@dimen/margin_small"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/icons"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/divider_light"
+        android:layout_below="@id/layout_price"
+        android:padding="@dimen/margin_medium"
+        app:cardCornerRadius="@dimen/margin_small"
+        android:id="@+id/layout_offer_detail"
+        android:layout_marginLeft="@dimen/margin_medium_2"
+        android:layout_marginRight="@dimen/margin_medium_2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/divider_light"
+            android:padding="@dimen/margin_medium_2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbl_detail"
+                android:text="Offer Details"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/primary"/>
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="24dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/anna_cars"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_car_offer"
+                android:layout_below="@+id/lbl_detail"
+                android:layout_marginTop="@dimen/margin_medium_2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_car_spec"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_small"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:text="Automatic\nAir Conditioning\nConvertable"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/ic_person"
+                    android:layout_toStartOf="@+id/txt_person"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_below="@+id/txt_car_model"
+                    android:src="@drawable/ic_person_black_24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_person"
+                    android:text="4"
+                    android:layout_toStartOf="@id/ic_bag"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="bold"
+                    android:textColor="@color/secondary_text"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/ic_bag"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_toStartOf="@+id/txt_bag"
+                    android:layout_below="@+id/txt_car_model"
+                    android:src="@drawable/ic_card_travel_black_24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_bag"
+                    android:text="1"
+                    android:layout_toStartOf="@id/ic_door"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="bold"
+                    android:textColor="@color/secondary_text"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:id="@+id/ic_door"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_toStartOf="@+id/txt_door"
+                    android:layout_below="@+id/txt_car_model"
+                    android:src="@drawable/car_door"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_door"
+                    android:text="4"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="bold"
+                    android:textColor="@color/secondary_text"/>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:id="@+id/layout_map"
+                android:layout_below="@id/layout_car_offer"
+                android:layout_marginTop="@dimen/margin_medium_2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/map_view"/>
+
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_rout"
+                android:layout_below="@id/layout_map"
+                android:layout_marginTop="@dimen/margin_medium_2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_date_pick_up"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_regular"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/primary_text"
+                    android:text="Apr 3, 12pm"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt__drop_off"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small"
+                    android:layout_below="@+id/txt_date_pick_up"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/divider"
+                    android:text="Pick-up"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_date_drop_off"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_regular"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/primary_text"
+                    android:text="Apr 3, 12pm"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_drop_off"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small"
+                    android:layout_below="@+id/txt_date_drop_off"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/divider"
+                    android:text="Drop-off"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_destination"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_regular"
+                    android:layout_below="@+id/txt_date_pick_up"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/primary"
+                    android:text="In Terminal"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

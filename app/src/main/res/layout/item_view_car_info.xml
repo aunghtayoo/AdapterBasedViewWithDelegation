@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="@dimen/margin_small"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/margin_medium_2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_medium_2"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_cost"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_regular_3x"
+                android:textColor="@color/primary"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="C$36"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:id="@+id/img_logo"
+                android:src="@drawable/avis_logo"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium_2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_class"
+                android:textStyle="bold"
+                android:textColor="@color/divider"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:text="Economy"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_car_model"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_below="@+id/txt_class"
+                android:textColor="@color/primary_text"
+                android:text="Chevrolet Spark"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/ic_person"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_below="@+id/txt_car_model"
+                android:src="@drawable/ic_person_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_person"
+                android:text="4"
+                android:layout_toEndOf="@id/ic_person"
+                android:layout_below="@id/txt_car_model"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textSize="@dimen/text_regular"
+                android:textStyle="bold"
+                android:textColor="@color/secondary_text"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/ic_bag"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_toEndOf="@+id/txt_person"
+                android:layout_below="@+id/txt_car_model"
+                android:src="@drawable/ic_card_travel_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_bag"
+                android:text="1"
+                android:layout_toEndOf="@id/ic_bag"
+                android:layout_below="@id/txt_car_model"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textSize="@dimen/text_regular"
+                android:textStyle="bold"
+                android:textColor="@color/secondary_text"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/ic_door"
+                android:padding="2dp"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_toEndOf="@+id/txt_bag"
+                android:layout_below="@+id/txt_car_model"
+                android:src="@drawable/car_door"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_door"
+                android:text="4"
+                android:layout_toEndOf="@id/ic_door"
+                android:layout_below="@id/txt_car_model"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textSize="@dimen/text_regular"
+                android:textStyle="bold"
+                android:textColor="@color/secondary_text"/>
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="64dp"
+                android:id="@+id/img_car"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/chevrolet_spark"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium_2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_date_pick_up"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_regular"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/primary_text"
+                android:text="Apr 3, 12pm"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt__drop_off"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_below="@+id/txt_date_pick_up"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/divider"
+                android:text="Pick-up"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_date_drop_off"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_regular"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/primary_text"
+                android:text="Apr 3, 12pm"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_drop_off"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_below="@+id/txt_date_drop_off"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/divider"
+                android:text="Drop-off"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_destination"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_regular"
+                android:layout_below="@+id/txt_date_pick_up"
+                android:layout_centerInParent="true"
+                android:textColor="@color/primary"
+                android:text="Non Airport"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
